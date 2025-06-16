@@ -2,7 +2,7 @@
 // Enables 4K resolution tricking youtube into thinking that we are on a 4K TV
 (function() {
 
-    //if (window.screen.width >= 3840 || window.screen.height >= 2160) return;
+    //if (window.screen.width >= 1920 || window.screen.height >= 1080) return;
 
     var existing = document.querySelector('meta[name="viewport"]');
     if (existing) {
@@ -885,14 +885,14 @@
     enableSponsorBlockOutro: true,
     enableSponsorBlockInteraction: true,
     enableSponsorBlockSelfPromo: true,
-    enableSponsorBlockMusicOfftopic: true,
+    enableSponsorBlockMusicOfftopic: false,
     videoSpeed: 1,
     enableDeArrow: true,
     enableDeArrowThumbnails: false,
     focusContainerColor: '#0f0f0f',
     routeColor: '#0f0f0f',
     enableFixedUI: true,
-    enableHqThumbnails: true,
+    enableHqThumbnails: false,
     enableChapters: true,
     enableLongPress: true,
     enableShorts: true
