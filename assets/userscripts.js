@@ -1598,12 +1598,6 @@
       );
     }
 
-    // Patch settings
-
-    if (r?.title?.runs) {
-      PatchSettings(r);
-    }
-
     // DeArrow Implementation. I think this is the best way to do it. (DOM manipulation would be a pain)
 
     if (
