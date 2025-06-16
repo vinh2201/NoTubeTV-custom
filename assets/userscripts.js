@@ -1579,25 +1579,6 @@
         );
     }
 
-    if (
-      !configRead("enableShorts") &&
-      r?.contents?.tvBrowseRenderer?.content?.tvSurfaceContentRenderer?.content
-    ) {
-      r.contents.tvBrowseRenderer.content.tvSurfaceContentRenderer.content.sectionListRenderer.contents =
-        r.contents.tvBrowseRenderer.content.tvSurfaceContentRenderer.content.sectionListRenderer.contents.filter(
-          (shelve) =>
-            shelve.shelfRenderer?.tvhtml5ShelfRendererType !==
-            "TVHTML5_SHELF_RENDERER_TYPE_SHORTS"
-        );
-    }
-
-    // Remove shorts ads
-    if (!Array.isArray(r) && r?.entries && configRead('enableAdBlock')) {
-      r.entries = r.entries?.filter(
-        (elm) => !elm?.command?.reelWatchEndpoint?.adClientParams?.isAd
-      );
-    }
-
     // DeArrow Implementation. I think this is the best way to do it. (DOM manipulation would be a pain)
 
     if (
